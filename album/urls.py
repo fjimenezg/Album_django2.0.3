@@ -17,7 +17,7 @@ from django.urls import path
 from album import views
 
 urlpatterns = [
-    path('hola/',views.first_view,name='hola'),
+    path('',views.first_view,name='hola'),
     path('category/',views.category, name='category-list'),
     path('category/<int:category_id>/detail/',views.category_detail,name='category-detail'),
     path('photo/',views.PhotoListView.as_view(),name='photo-list'),
