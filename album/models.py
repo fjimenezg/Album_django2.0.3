@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
+from django.urls import reverse
 
 # Create your models here.
 class Category(models.Model):
@@ -22,7 +23,11 @@ class Photo(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('photo-list')
+
 @receiver(post_delete, sender=Photo)
 def photo_delete(sender, instance, **kwargs):
     """ Borra los ficheros de las fotos que se eliminan. """
     instance.photo.delete(False)
+
