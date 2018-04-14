@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django_adminlte',
     #si se requiere cambiar la interfaz del admin propio de django
     'django_adminlte_theme',
-
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,6 +50,9 @@ INSTALLED_APPS = [
 
     'album',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

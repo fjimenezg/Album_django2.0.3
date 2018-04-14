@@ -11,6 +11,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category-list')
+
 class Photo(models.Model):
     """ Fotos del Album """
     category = models.ForeignKey('Category', on_delete=models.PROTECT )

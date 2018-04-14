@@ -29,19 +29,29 @@
                         <i class="fa fa-dashboard"></i> <span>Category</span>
                     </a>
                 </li>
+                <li>
+                        <a href="{% url "photo-list" %}">
+                            <i class="fa fa-photo"></i> <span>Photo</span>
+                        </a>
+                    </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-group"></i> <span>Sub menu</span>
+                        <i class="fa fa-group"></i> <span>Update</span>
                         <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="#">
-                                <i class="fa fa-user"></i> Another link
+                            <a href="{% url "category-create" %}">
+                                <i class="fa fa-contao"></i> Category
                             </a>
                         </li>
+                        <li>
+                                <a href="{% url "photo-create" %}">
+                                    <i class="fa fa-photo"></i> Photo
+                                </a>
+                            </li>
                     </ul>
                 </li>
             {% endblock nav_links %}

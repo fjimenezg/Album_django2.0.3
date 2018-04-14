@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block maincontent %}
   <form enctype="multipart/form-data" method="post">{% csrf_token %}
-      {{ form.as_p }}
+    <div class="col-sm-6 ">
+        {{ form|crispy }}
+ 
     <button type="submit">Save</button>
     <a class='btn' href="{% url 'photo-list' %}">Cancel</a>
+  </div> 
   </form>
 {% endblock maincontent%} 

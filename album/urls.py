@@ -28,5 +28,11 @@ urlpatterns = [
     path('photo/create/', views.PhotoCreate.as_view(), name='photo-create'),
     #Delete
     path('photo/<int:pk>/delete/', views.PhotoDelete.as_view(), name='photo-delete'),
+    # Update
+    path('category/<int:pk>/update/',views.CategoryUpdate.as_view(),name='category-update'), 
+    #Create
+    path('category/create/', views.CategoryCreate.as_view(), name='category-create'),
+    #Delete
+    path('category/<int:pk>/delete/', views.CategoryDelete.as_view(), name='category-delete'),
 
 ]

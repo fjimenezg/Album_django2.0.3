@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+  <form enctype="multipart/form-data" method="post">{% csrf_token %}
+      {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a class="btn" href="{% url 'category-list' %}">Cancel</a>
+  </form>
+{% endblock maincontent%} 
