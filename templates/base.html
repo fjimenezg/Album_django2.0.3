@@ -1,3 +1,4 @@
+{% extends 'adminlte/base.html' %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -10,6 +11,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    {% block title %}My App{% endblock %}
+    {% block content %}
+   
     <!-- NavBar -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -53,5 +57,7 @@
         {% block maincontent %}
         {% endblock maincontent %}
     </div>
+  
+    {% endblock %}
 </body>
 </html>
