@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from album import views
 
 urlpatterns = [
     path('album/',include('album.urls')),
     path('admin/', admin.site.urls),
+    #path('accounts/', include('registration.backends.default.urls')),
+    path('accounts/', include('registration.backends.admin_approval.urls')),
+    path('accounts/profile/',views.first_view),
+    
+    
 ]

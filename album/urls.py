@@ -13,10 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.urls import path, include
 from album import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('category_rest', views.CategoryViewSet)
+router.register('photo_rest', views.PhotoViewSet)
+
+
+
 
 urlpatterns = [
+    path('api/', include(router.urls)),
     path('',views.first_view,name='base'),
     path('category/',views.category, name='category-list'),
     path('category/<int:category_id>/detail/',views.category_detail,name='category-detail'),

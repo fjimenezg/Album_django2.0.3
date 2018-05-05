@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'registration',
+    'rest_framework',
+
    
    
 
@@ -50,7 +52,14 @@ INSTALLED_APPS = [
     'album',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+SITE_ID = 1
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+
+#REGISTRATION_USE_SITE_EMAIL = False
+
+#CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 MIDDLEWARE = [
@@ -144,3 +153,10 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media/')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'media'),
 )
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'frameworksumariana@gmail.com'
+EMAIL_HOST_PASSWORD = 'ingsis604'
+EMAIL_PORT =  587
