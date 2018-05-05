@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django_adminlte',
     #si se requiere cambiar la interfaz del admin propio de django
     'django_adminlte_theme',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -92,6 +91,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'album',
+        # 'USER':'root',
+        # 'PASSWORD': 'ci123',
+        # 'HOST':'localhost',
+        # 'PORT':'3306',
     }
 }
 
