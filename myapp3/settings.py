@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-
      #para poder ejecutar adminlte y hacer uso de sus templates
     'django_adminlte',
     #si se requiere cambiar la interfaz del admin propio de django
@@ -44,11 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'registration',
     'rest_framework',
-
-   
-   
-
-
     'album',
 ]
 
@@ -58,7 +52,6 @@ ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, us
 REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 
 #REGISTRATION_USE_SITE_EMAIL = False
-
 #CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
@@ -103,7 +96,7 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.mysql',
         # 'NAME': 'album',
         # 'USER':'root',
-        # 'PASSWORD': 'ci123',
+        # 'PASSWORD': 'cantrasenia',
         # 'HOST':'localhost',
         # 'PORT':'3306',
     }
