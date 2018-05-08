@@ -37,7 +37,8 @@ def category_detail(request, category_id):
     category = Category.objects.get(id=category_id)
     context = {'object': category}
     return render(request, 'album/category_detail.html', context)
-
+    
+@method_decorator(login_required, name='dispatch')
 class PhotoListView(ListView):
     model = Photo
 
